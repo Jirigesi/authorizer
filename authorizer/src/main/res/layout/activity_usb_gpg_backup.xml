@@ -13,7 +13,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:padding="10dp"
-              tools:context="uci.net2.tjado.passwdsafe.UsbGpgBackupActivity">
+              tools:context="net2.tjado.passwdsafe.UsbGpgBackupActivity">
 
     <Button
         android:id="@+id/btn_create_backup"

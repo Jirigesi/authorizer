@@ -18,21 +18,21 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
-import uci.net2.tjado.passwdsafe.PasswdSafeApp;
-import uci.net2.tjado.passwdsafe.PasswdSafeFileDataFragment;
-import uci.net2.tjado.passwdsafe.PasswdSafeListFragment;
-import uci.net2.tjado.passwdsafe.Preferences;
-import uci.net2.tjado.passwdsafe.file.PasswdFileData;
-import uci.net2.tjado.passwdsafe.file.PasswdFileDataUser;
-import uci.net2.tjado.passwdsafe.file.PasswdRecordFilter;
-import uci.net2.tjado.passwdsafe.lib.PasswdSafeUtil;
-import uci.net2.tjado.passwdsafe.lib.view.GuiUtils;
-import uci.net2.tjado.passwdsafe.lib.ObjectHolder;
-import uci.net2.tjado.passwdsafe.util.Pair;
-import uci.net2.tjado.passwdsafe.view.CopyField;
-import uci.net2.tjado.passwdsafe.view.PasswdFileDataView;
-import uci.net2.tjado.passwdsafe.view.PasswdLocation;
-import uci.net2.tjado.passwdsafe.view.PasswdRecordListData;
+import net2.tjado.passwdsafe.PasswdSafeApp;
+import net2.tjado.passwdsafe.PasswdSafeFileDataFragment;
+import net2.tjado.passwdsafe.PasswdSafeListFragment;
+import net2.tjado.passwdsafe.Preferences;
+import net2.tjado.passwdsafe.file.PasswdFileData;
+import net2.tjado.passwdsafe.file.PasswdFileDataUser;
+import net2.tjado.passwdsafe.file.PasswdRecordFilter;
+import net2.tjado.passwdsafe.lib.PasswdSafeUtil;
+import net2.tjado.passwdsafe.lib.view.GuiUtils;
+import net2.tjado.passwdsafe.lib.ObjectHolder;
+import net2.tjado.passwdsafe.util.Pair;
+import net2.tjado.passwdsafe.view.CopyField;
+import net2.tjado.passwdsafe.view.PasswdFileDataView;
+import net2.tjado.passwdsafe.view.PasswdLocation;
+import net2.tjado.passwdsafe.view.PasswdRecordListData;
 
 import org.pwsafe.lib.file.PwsRecord;
 
@@ -72,22 +72,22 @@ public class LauncherRecordShortcuts extends AppCompatActivity
     {
         PasswdSafeApp.setupDialogTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(uci.net2.tjado.passwdsafe.R.layout.activity_launcher_record_shortcuts);
+        setContentView(net2.tjado.passwdsafe.R.layout.activity_launcher_record_shortcuts);
         SharedPreferences prefs = Preferences.getSharedPrefs(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
 
-        itsFile = (TextView)findViewById(uci.net2.tjado.passwdsafe.R.id.file);
+        itsFile = (TextView)findViewById(net2.tjado.passwdsafe.R.id.file);
         itsFileDataView.onAttach(this, prefs);
 
         Intent intent = getIntent();
         switch (intent.getAction()) {
         case Intent.ACTION_CREATE_SHORTCUT: {
-            setTitle(uci.net2.tjado.passwdsafe.R.string.shortcut_record);
+            setTitle(net2.tjado.passwdsafe.R.string.shortcut_record);
             itsMode = Mode.SHORTCUT;
             break;
         }
         case PasswdSafeApp.CHOOSE_RECORD_INTENT: {
-            setTitle(uci.net2.tjado.passwdsafe.R.string.choose_record);
+            setTitle(net2.tjado.passwdsafe.R.string.choose_record);
             itsMode = Mode.CHOOSE_RECORD;
             GuiUtils.setVisible(itsFile, false);
             break;
@@ -113,7 +113,7 @@ public class LauncherRecordShortcuts extends AppCompatActivity
         if (savedInstanceState == null) {
             FragmentManager fragMgr = getSupportFragmentManager();
             FragmentTransaction txn = fragMgr.beginTransaction();
-            txn.replace(uci.net2.tjado.passwdsafe.R.id.contents,
+            txn.replace(net2.tjado.passwdsafe.R.id.contents,
                         PasswdSafeListFragment.newInstance(itsLocation, true));
             txn.commit();
         }
@@ -142,8 +142,8 @@ public class LauncherRecordShortcuts extends AppCompatActivity
         if (fileTitleVal != null) {
             itsFile.setText(fileTitleVal);
         } else {
-            itsFile.setText(uci.net2.tjado.passwdsafe.R.string.no_records_open_file);
-            GuiUtils.setVisible(findViewById(uci.net2.tjado.passwdsafe.R.id.contents), false);
+            itsFile.setText(net2.tjado.passwdsafe.R.string.no_records_open_file);
+            GuiUtils.setVisible(findViewById(net2.tjado.passwdsafe.R.id.contents), false);
         }
     }
 
@@ -200,7 +200,7 @@ public class LauncherRecordShortcuts extends AppCompatActivity
             FragmentManager fragMgr = getSupportFragmentManager();
             FragmentTransaction txn = fragMgr.beginTransaction();
             txn.setTransition(FragmentTransaction.TRANSIT_NONE);
-            txn.replace(uci.net2.tjado.passwdsafe.R.id.contents,
+            txn.replace(net2.tjado.passwdsafe.R.id.contents,
                         PasswdSafeListFragment.newInstance(location, true));
             txn.addToBackStack(null);
             txn.commit();
@@ -222,7 +222,7 @@ public class LauncherRecordShortcuts extends AppCompatActivity
         itsFileDataView.setCurrGroups(itsLocation.getGroups());
 
         FragmentManager fragMgr = getSupportFragmentManager();
-        Fragment contentsFrag = fragMgr.findFragmentById(uci.net2.tjado.passwdsafe.R.id.contents);
+        Fragment contentsFrag = fragMgr.findFragmentById(net2.tjado.passwdsafe.R.id.contents);
         if (contentsFrag instanceof PasswdSafeListFragment) {
             ((PasswdSafeListFragment)contentsFrag).updateLocationView(
                     itsLocation, PasswdSafeListFragment.Mode.ALL);
@@ -260,7 +260,7 @@ public class LauncherRecordShortcuts extends AppCompatActivity
                 intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, rcval.second);
                 intent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
                                 Intent.ShortcutIconResource.fromContext(
-                                        this, uci.net2.tjado.passwdsafe.R.mipmap.ic_launcher_passwdsafe));
+                                        this, net2.tjado.passwdsafe.R.mipmap.ic_launcher_passwdsafe));
                 setResult(RESULT_OK, intent);
             }
             break;
