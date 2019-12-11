@@ -1,0 +1,2 @@
+include ':lib', ':LauncherFileShortcuts', ':LauncherRecordShortcutsDynamicFeature', ':OTPAddActivityDynamicModule', ':OTPScanActivityDynamicModule'
+include ':authorizer'
