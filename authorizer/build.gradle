@@ -21,7 +21,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         //Reference them in .xml files.
-        resValue "string", "application_id", "${applicationId}"
     }
     buildTypes {
         release {

@@ -10,7 +10,6 @@
     <color name="accent">#259AC0</color>
     <color name="accentDark">#259AC0</color>
     <color name="colorPrimary">#259AC0</color>
-    <color name="colorBackground">#259AC0</color>
 
     <color name="accent_material_light" tools:override="true">@color/accent</color>
     <color name="accent_material_dark" tools:override="true">@color/accentDark</color>
