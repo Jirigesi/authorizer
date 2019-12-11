@@ -6,7 +6,10 @@
     tools:ignore="UnusedAttribute">
 
     <application
+
         android:hasCode="true"
+        tools:replace="android:hasCode"
+
         android:name=".PasswdSafeApp"
         android:allowBackup="true"
         android:description="@string/app_desc"
