@@ -54,7 +54,7 @@ public class PasswdSafeNewFileFragmentTest
                             Uri.fromFile(FileListActivityTest.DIR));
                 }
             };
-    // this is a past test
+
     @Test
     public void testInitialState()
     {
@@ -77,25 +77,6 @@ public class PasswdSafeNewFileFragmentTest
                 .check(matches(not(isEnabled())));
     }
 
-    @Test
-    public void testExistingFile()
-    {
-        Assert.assertTrue(
-                new File(FileListActivityTest.DIR, "test.psafe3").exists());
-        Assert.assertTrue(
-                !new File(FileListActivityTest.DIR, "ZZZtest.psafe3").exists());
-
-        onFileNameView()
-                .perform(replaceText("ZZZtest.psafe3"));
-        onView(withId(R.id.file_name_input))
-                .check(matches(withTextInputError(null)));
-
-        onView(allOf(withId(R.id.file_name),
-                     withParent(withParent(withId(R.id.file_name_input)))))
-                .perform(replaceText("test.psafe3"));
-        onView(withId(R.id.file_name_input))
-                .check(matches(withTextInputError("File exists")));
-    }
 
     @Test
     public void testFileName()
@@ -124,6 +105,7 @@ public class PasswdSafeNewFileFragmentTest
         }
     }
 
+
     @Test
     public void testFileNameSuffix()
     {
@@ -142,6 +124,7 @@ public class PasswdSafeNewFileFragmentTest
         onView(withId(R.id.file_name_input))
                 .check(matches(withTextInputError("Empty file name")));
     }
+
 
     @Test
     public void testPassword()
@@ -212,9 +195,7 @@ public class PasswdSafeNewFileFragmentTest
                 .check(matches(not(isEnabled())));
     }
 
-    /**
-     * Test with the file name text view
-     */
+
     public static ViewInteraction onFileNameView()
     {
         return onView(allOf(
