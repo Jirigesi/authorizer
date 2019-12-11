@@ -9,16 +9,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution">
 
-    <application
-        android:hasCode="false">
-    </application>
+
     <dist:module
         dist:instant="false"
         dist:onDemand="true"
         dist:title="@string/title_launcherfileshortcuts">
-        <dist:delivery>
-            <dist:on-demand />
-        </dist:delivery>
+<!--        <dist:delivery>-->
+<!--            <dist:on-demand />-->
+<!--        </dist:delivery>-->
         <dist:fusing dist:include="true" />
     </dist:module>
 </manifest>
