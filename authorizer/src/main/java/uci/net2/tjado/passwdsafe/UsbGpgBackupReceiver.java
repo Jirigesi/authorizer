@@ -41,7 +41,7 @@ public class UsbGpgBackupReceiver extends BroadcastReceiver
         PasswdSafeUtil.dbginfo(TAG, "onReceive - starting activity...");
 
         Intent i = new Intent();
-        i.setClassName("net2.tjado.passwdsafe", "net2.tjado.passwdsafe.UsbGpgBackupActivity");
+        i.setClassName("net.tjado.passwdsafe", "net.tjado.passwdsafe.UsbGpgBackupActivity");
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(i);
     }
