@@ -219,6 +219,12 @@
             </intent-filter>
         </activity>
 
+            <activity
+                android:name="com.example.otpaddactivitydynamicmodule.AddActivity"
+                android:label="Add Token"
+                android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+                android:windowSoftInputMode="stateVisible" />
+
         <activity
             android:name=".otp.ScanActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />

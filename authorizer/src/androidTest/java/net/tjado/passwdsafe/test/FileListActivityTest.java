@@ -67,19 +67,6 @@ public class FileListActivityTest
     public IntentsTestRule<FileListActivity> itsActivityRule =
             new IntentsTestRule<>(FileListActivity.class);
 
-    @Test
-    public void testFiles()
-    {
-        verifyDrawerClosed();
-
-        onView(withId(android.R.id.list));
-        onTestFile("test.psafe3").check(matches(anything()));
-
-        onView(withId(android.R.id.list))
-                .check(matches(withAdaptedData(withFileData("test.psafe3"))));
-        onView(withId(android.R.id.list))
-                .check(matches(not(withAdaptedData(withFileData("none.psafe3")))));
-    }
 
     @Test
     public void testFileNav()
