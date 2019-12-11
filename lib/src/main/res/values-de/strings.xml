@@ -13,6 +13,7 @@
     <string name="build_date">Erstellungsdatum</string>
     <string name="build_id">Erstellungs-ID</string>
     <string name="cancel">Abbrechen</string>
+    <string name="choose_files">Dateien auswählen</string>
     <string name="close">Schließen</string>
     <string name="copy_clipboard_error">%1$s - Fehler beim Kopieren in die Zwischenablage. Grund ist wohl ein Fehler in manchen Samsung-Geräten.</string>
     <string name="copy_trace_and_close">Trace kopieren und schließen</string>
@@ -20,6 +21,7 @@
     <string name="edit">Bearbeiten</string>
     <string name="info">Info</string>
     <string name="error">Fehler</string>
+    <string name="error_fmt">Fehler: %1$s</string>
     <string name="error_msg">&lt;i&gt;%1$s&lt;/i&gt;</string>
     <string name="file_type_icon">Dateitypsymbol</string>
     <string name="google_drive">Google Drive</string>

@@ -24,6 +24,7 @@
     <string name="change_password">Passwort ändern</string>
     <string name="choose">Auswählen</string>
     <string name="choose_group">Gruppe auswählen</string>
+    <string name="choose_record">Eintrag auswählen</string>
     <string name="choose_type">Typ auswählen</string>
     <string name="clear">Leeren</string>
     <string name="clear_all_saved_passwords">Lösche alle gespeicherten Passwörter</string>
@@ -216,6 +217,7 @@
     <string name="no_shortcut_chosen">Keine Verknüpfung ausgewählt</string>
     <string name="no_policies">Keine Regeln</string>
     <string name="no_records">Keine Einträge</string>
+    <string name="no_records_open_file">Keine Einträge. Öffne eine Datei und probier es nochmal.</string>
     <string name="none_paren">(Keine)</string>
     <string name="none_selected_open">Nichts gewählt. Öffne eine Datei in PasswdSafe.</string>
     <string name="notes">Notizen</string>
@@ -293,15 +295,19 @@
     <string name="saving_file">Speichere %s …</string>
     <string name="search">Suchen</string>
     <string name="search_hint">In PasswdSafe suchen</string>
+    <string name="select_accounts">Konto auswählen</string>
     <string name="select_file_label">Datei auswählen:</string>
     <string name="send">Senden</string>
     <string name="set_password">Passwort wieder verwenden</string>
     <string name="shortcut_base_record_header">VERKNÜPFUNG</string>
+    <string name="shortcut_file">Verknüpfungsdatei</string>
+    <string name="shortcut_record">Verknüpfungseintrag</string>
     <string name="shortcut_to_same_record">Verknüpfung zum selben Eintrag</string>
     <string name="show_backup_files">Zeige Sicherungen an</string>
     <string name="show_password">Passwort anzeigen</string>
     <string name="show_passwords">Passwörter anzeigen</string>
     <string name="symbols_used_by_default">Standardsymbole in der Passwortregel: %1$s</string>
+    <string name="sync">Synchronisieren</string>
     <string name="times_header">ZEITEN</string>
     <string name="title">Titel</string>
     <string name="touch_sensor_to_save_the_password">Sensor berühren um das Passwort zu speichern</string>
@@ -321,6 +327,8 @@
     <string name="view_password_expirations">Passwortlaufzeiten anzeigen</string>
     <string name="word_wrap">Zeilenumbruch</string>
     <string name="yes">Ja</string>
+    <string name="yubikey">YubiKey</string>
+    <string name="yubikey_disabled">YubiKey deaktiviert. NFC einschalten, um es benutzen zu können.</string>
     <string name="yubikey_error">Fehler bei der Kommunikation mit dem YubiKey</string>
     <string name="yubikey_slot_none">Deaktiviert</string>
     <string name="yubikey_slot_1">YubiKey Slot 1</string>
@@ -632,6 +640,7 @@
     <string name="ic_keyboard">{gmi_keyboard}</string>
     <string name="ic_arrow_right">{gmi_chevron_right}</string>
     <string name="ic_arrow_down">{gmi_chevron_down}</string>
+    <string name="ic_key">{gmi_key}</string>
     <string name="ic_folder">{gmi_folder}</string>
 
     <string name="file_backup_usb_gpg">Aktiviere GPG Backup auf USB Speicher</string>
@@ -644,6 +653,13 @@
         verschlüsselt und im ausgewählten Verzeichnis gespeichert.
     </string>
 
+    <string-array name="algorithms">
+        <item>MD5</item>
+        <item>SHA1</item>
+        <item>SHA256</item>
+        <item>SHA512</item>
+    </string-array>
+
     <string name="bluetooth_enabled">Bluetooth aktiviert!</string>
     <string name="bluetooth_enable_error">Bluetooth konnte nicht aktiviert werden!</string>
     <string name="error_permission_camera_open">Keine Berechtigung um die Kamera zu öffnen!</string>
@@ -651,10 +667,18 @@
     <string name="otp_header">OTP</string>
     <string name="otp_overwrite">Aktuellen OTP ersetzen? Dieser kann nicht wiederhergestellt werden!</string>
     <string name="replace">Ersetzen</string>
+    <string name="secret">Geheimnis</string>
+    <string name="base32">(Base32)</string>
+    <string name="totp">TOTP</string>
+    <string name="hotp">HOTP</string>
+    <string name="digits">Ziffern</string>
+    <string name="algorithm">Algorithmus</string>
+    <string name="counter">Zähler</string>
     <string name="otp_token">Token:</string>
     <string name="otp_add_manually">OTP manuell hinzufügen</string>
     <string name="otp_add_camera">OTP QR Code scannen</string>
 
     <string name="autotype_delimiter_return">Enter</string>
     <string name="autotype_delimiter_tab">Tab</string>
+    <string name="autotype_delimiter">Trennzeichen:></string>
 </resources>
