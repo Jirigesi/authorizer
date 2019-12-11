@@ -17,13 +17,12 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import net.tjado.passwdsafe.R;
-import net.tjado.passwdsafe.otp.AddSecretTextWatcher;
-import net.tjado.passwdsafe.otp.AddTextWatcher;
+import net2.tjado.passwdsafe.R;
+import net2.tjado.passwdsafe.otp.AddSecretTextWatcher;
+import net2.tjado.passwdsafe.otp.AddTextWatcher;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
