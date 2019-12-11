@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net2.tjado.passwdsafe.PasswdSafe">
+    tools:context="uci.tjado.passwdsafe.PasswdSafe">
 
     <RelativeLayout android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -43,7 +43,7 @@
                       tools:ignore="UnusedAttribute">
 
             <fragment android:id="@+id/content_list"
-                      android:name="net2.tjado.passwdsafe.PasswdSafeListFragment"
+                      android:name="uci.tjado.passwdsafe.PasswdSafeListFragment"
                       android:layout_width="0dp"
                       android:layout_height="match_parent"
                       android:layout_weight="1"
@@ -66,7 +66,7 @@
     <!-- The drawer is given a fixed width in dp and extends the full height of
          the container. -->
     <fragment android:id="@+id/navigation_drawer"
-              android:name="net2.tjado.passwdsafe.PasswdSafeNavDrawerFragment"
+              android:name="uci.tjado.passwdsafe.PasswdSafeNavDrawerFragment"
               android:layout_width="@dimen/navigation_drawer_width"
               android:layout_height="match_parent"
               android:layout_gravity="start"

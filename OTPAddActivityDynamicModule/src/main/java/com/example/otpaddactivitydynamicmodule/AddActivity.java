@@ -20,9 +20,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import net2.tjado.passwdsafe.R;
-import net2.tjado.passwdsafe.otp.AddSecretTextWatcher;
-import net2.tjado.passwdsafe.otp.AddTextWatcher;
+import uci.tjado.passwdsafe.R;
+import uci.tjado.passwdsafe.otp.AddSecretTextWatcher;
+import uci.tjado.passwdsafe.otp.AddTextWatcher;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

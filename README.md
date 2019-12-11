@@ -3,9 +3,9 @@ A Password Manager for Android with Auto-Type over USB and Bluetooth, OTP and mu
   
 The idea behind Authorizer is, to use old smartphones as a hardware password manager only. To avoid manual typing of long and complex passwords everytime you need them, Authorizer provides Auto-Type features over USB and Bluetooth. It pretends to be a keyboard (e.g. over an USB On-The-Go adapter) and with a button press inside the app, it will automatically type the password for you on your pc, laptop, tablet or other smartphone.  
 
-<a href="https://f-droid.org/packages/net2.tjado.passwdsafe/" target="_blank">
+<a href="https://f-droid.org/packages/uci.tjado.passwdsafe/" target="_blank">
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
-<a href="https://play.google.com/store/apps/details?id=net2.tjado.passwdsafe" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=uci.tjado.passwdsafe" target="_blank">
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
   
 Authorizer is based on [PasswdSafe](https://sourceforge.net/projects/passwdsafe/) a Password Safe port for Android and [FreeOTP](https://github.com/freeotp/freeotp-android).  
