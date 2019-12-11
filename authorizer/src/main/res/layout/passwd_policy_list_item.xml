@@ -62,7 +62,7 @@
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         app:contentPadding="4dp">
-        <net2.tjado.passwdsafe.view.PasswdPolicyView
+        <uci.net2.tjado.passwdsafe.view.PasswdPolicyView
             android:id="@+id/policy_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

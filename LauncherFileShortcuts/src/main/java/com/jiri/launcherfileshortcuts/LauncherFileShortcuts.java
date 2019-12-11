@@ -17,12 +17,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
 
-import net2.tjado.passwdsafe.FileListFragment;
-import net2.tjado.passwdsafe.PasswdSafeApp;
-import net2.tjado.passwdsafe.Preferences;
-import net2.tjado.passwdsafe.StorageFileListFragment;
-import net2.tjado.passwdsafe.lib.ApiCompat;
-import net2.tjado.passwdsafe.lib.PasswdSafeUtil;
+import uci.net2.tjado.passwdsafe.FileListFragment;
+import uci.net2.tjado.passwdsafe.PasswdSafeApp;
+import uci.net2.tjado.passwdsafe.Preferences;
+import uci.net2.tjado.passwdsafe.StorageFileListFragment;
+import uci.net2.tjado.passwdsafe.lib.ApiCompat;
+import uci.net2.tjado.passwdsafe.lib.PasswdSafeUtil;
 
 public class LauncherFileShortcuts extends AppCompatActivity
         implements FileListFragment.Listener,
@@ -40,7 +40,7 @@ public class LauncherFileShortcuts extends AppCompatActivity
     {
         PasswdSafeApp.setupDialogTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(net2.tjado.passwdsafe.R.layout.activity_launcher_file_shortcuts);
+        setContentView(uci.net2.tjado.passwdsafe.R.layout.activity_launcher_file_shortcuts);
 
         FragmentManager fragMgr = getSupportFragmentManager();
         FragmentTransaction txn = fragMgr.beginTransaction();
@@ -59,9 +59,9 @@ public class LauncherFileShortcuts extends AppCompatActivity
 
         itsIsDefaultFile = intent.getBooleanExtra(EXTRA_IS_DEFAULT_FILE, false);
         if (itsIsDefaultFile) {
-            setTitle(net2.tjado.passwdsafe.R.string.default_file_to_open);
+            setTitle(uci.net2.tjado.passwdsafe.R.string.default_file_to_open);
         } else {
-            setTitle(net2.tjado.passwdsafe.R.string.shortcut_file);
+            setTitle(uci.net2.tjado.passwdsafe.R.string.shortcut_file);
         }
     }
 
@@ -76,7 +76,7 @@ public class LauncherFileShortcuts extends AppCompatActivity
     public void onBackPressed()
     {
         FragmentManager mgr = getSupportFragmentManager();
-        Fragment frag = mgr.findFragmentById(net2.tjado.passwdsafe.R.id.files);
+        Fragment frag = mgr.findFragmentById(uci.net2.tjado.passwdsafe.R.id.files);
         boolean handled = (frag instanceof FileListFragment) &&
                           frag.isVisible() &&
                           ((FileListFragment) frag).doBackPressed();
@@ -100,7 +100,7 @@ public class LauncherFileShortcuts extends AppCompatActivity
             intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, fileName);
             intent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
                             Intent.ShortcutIconResource.fromContext(
-                                    this, net2.tjado.passwdsafe.R.mipmap.ic_launcher_passwdsafe));
+                                    this, uci.net2.tjado.passwdsafe.R.mipmap.ic_launcher_passwdsafe));
             setResult(Activity.RESULT_OK, intent);
         }
 
@@ -155,7 +155,7 @@ public class LauncherFileShortcuts extends AppCompatActivity
             }
             FragmentManager fragMgr = getSupportFragmentManager();
             FragmentTransaction txn = fragMgr.beginTransaction();
-            txn.replace(net2.tjado.passwdsafe.R.id.files, frag);
+            txn.replace(uci.net2.tjado.passwdsafe.R.id.files, frag);
             txn.commit();
             itsIsStorageFrag = storageFrag;
         }

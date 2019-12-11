@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="net2.tjado.passwdsafe.FileListFragment">
+              tools:context="uci.net2.tjado.passwdsafe.FileListFragment">
 
     <TextView android:layout_width="fill_parent"
               android:layout_height="wrap_content"

@@ -14,7 +14,7 @@
             android:paddingLeft="@dimen/fragment_full_horizontal_margin"
             android:paddingRight="@dimen/fragment_full_horizontal_margin"
             android:paddingTop="@dimen/fragment_full_vertical_margin"
-            tools:context="net2.tjado.passwdsafe.PasswdSafeEditRecordFragment">
+            tools:context="uci.net2.tjado.passwdsafe.PasswdSafeEditRecordFragment">
 
     <LinearLayout android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
 
             </LinearLayout>
 
-            <net2.tjado.passwdsafe.view.PasswdPolicyView
+            <uci.net2.tjado.passwdsafe.view.PasswdPolicyView
                 android:id="@+id/policy_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

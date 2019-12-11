@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net2.tjado.passwdsafe.FileListActivity">
+    tools:context="uci.net2.tjado.passwdsafe.FileListActivity">
 
     <LinearLayout android:id="@+id/content"
                   android:layout_width="match_parent"
@@ -56,7 +56,7 @@
     <!-- The drawer is given a fixed width in dp and extends the full height of
          the container. -->
     <fragment android:id="@+id/navigation_drawer"
-              android:name="net2.tjado.passwdsafe.FileListNavDrawerFragment"
+              android:name="uci.net2.tjado.passwdsafe.FileListNavDrawerFragment"
               android:layout_width="@dimen/navigation_drawer_width"
               android:layout_height="match_parent"
               android:layout_gravity="left|start"
