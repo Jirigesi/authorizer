@@ -9,6 +9,7 @@
 
 package uci.tjado.passwdsafe;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.BroadcastReceiver;
@@ -22,13 +23,20 @@ public class UsbGpgBackupReceiver extends BroadcastReceiver
 {
     private static final String TAG = "UsbGpgBackupReceiver";
 
+
     /* (non-Javadoc)
      * @see android.content.BroadcastReceiver#onReceive(android.content.Context, android.content.Intent)
      */
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        if (!UsbManager.ACTION_USB_DEVICE_ATTACHED.equals(intent.getAction())) {
+        ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
+        ActivityManager activityManager = (ActivityManager) context. getSystemService(Context.ACTIVITY_SERVICE);
+        activityManager.getMemoryInfo(mi);
+        boolean ramLow = mi.lowMemory;
+
+
+        if (!UsbManager.ACTION_USB_DEVICE_ATTACHED.equals(intent.getAction()) && !ramLow) {
             PasswdSafeUtil.dbginfo(TAG, "onReceive - aborting");
             return;
         }
