@@ -36,7 +36,7 @@ public class UsbGpgBackupReceiver extends BroadcastReceiver
         boolean ramLow = mi.lowMemory;
 
 
-        if (!UsbManager.ACTION_USB_DEVICE_ATTACHED.equals(intent.getAction()) && !ramLow) {
+        if (!UsbManager.ACTION_USB_DEVICE_ATTACHED.equals(intent.getAction())) {
             PasswdSafeUtil.dbginfo(TAG, "onReceive - aborting");
             return;
         }
