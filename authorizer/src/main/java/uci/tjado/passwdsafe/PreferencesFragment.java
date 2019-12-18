@@ -322,19 +322,20 @@ public class PreferencesFragment extends PreferenceFragmentCompat
     }
 
     @Override
+    //here is bug for testing, the reason is app cannot download
     public boolean onPreferenceClick(Preference preference)
     {
         switch (preference.getKey()) {
         case Preferences.PREF_DEF_FILE: {
             Intent intent = new Intent(Intent.ACTION_CREATE_SHORTCUT, null);
             if (SplitInstallManagerFactory.create(getActivity()).getInstalledModules().contains("LauncherFileShortcuts")) {
+                intent.setClass(getContext(),DownloadDynamicModule.class);
+                startActivity(intent);
+                return true;
+            } else{
                 intent.setClassName(getContext().getPackageName(), launcherFileShortcuts);
                 intent.putExtra("isDefFile", true);
                 startActivityForResult(intent, REQUEST_DEFAULT_FILE);
-                return true;
-            } else{
-                intent.setClass(getContext(),DownloadDynamicModule.class);
-                startActivity(intent);
                 return true;
             }
 
